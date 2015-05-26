@@ -93,7 +93,21 @@ class m150525_135340_init extends Migration
 
     public function safeDown()
     {
+        $this->dropForeignKey('product_category_id_FK', 'product','category');
+        $this->dropForeignKey('category_category_id_FK', 'category', 'category');
+        $this->dropForeignKey('group_param_category_id_FK', 'group_param', 'category');
+        $this->dropForeignKey('params_group_param_id_FK', 'param', 'group_param');
+        $this->dropForeignKey('photo_product_id_FK', 'photo', 'product');
+        $this->dropForeignKey('action_product_action_id_FK', 'action_product', 'action');
+        $this->dropForeignKey('action_product_product_id_FK', 'action_product', 'product');
+
         $this->dropTable('product');
+        $this->dropTable('category');
+        $this->dropTable('group_param');
+        $this->dropTable('param');
+        $this->dropTable('photo');
+        $this->dropTable('action');
+        $this->dropTable('action_product');
 
         return true;
     }
