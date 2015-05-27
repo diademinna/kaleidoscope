@@ -5,15 +5,16 @@ namespace app\modules\admin\controllers;
 use Yii;
 use app\models\Category;
 use yii\data\ActiveDataProvider;
-use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
  * CategoryController implements the CRUD actions for Category model.
  */
-class CategoryController extends Controller
+class CategoryController extends AdminController
 {
+    public $layout = 'main';
+
     public function behaviors()
     {
         return [
@@ -32,6 +33,7 @@ class CategoryController extends Controller
      */
     public function actionIndex()
     {
+//        $this->layout = '@app/admin/layouts/main';
         $dataProvider = new ActiveDataProvider([
             'query' => Category::find(),
         ]);
