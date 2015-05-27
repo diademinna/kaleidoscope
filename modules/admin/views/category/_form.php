@@ -18,13 +18,23 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'ext')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'image')->fileInput() ?>
 
-    <?= $form->field($model, 'active')->textInput() ?>
+    <?= $form->field($model, 'active')->checkbox(['bool' => true]) ?>
 
-    <?= $form->field($model, 'pos')->textInput() ?>
+    <?= $form->field($model, 'pos')->input('number') ?>
 
-    <?= $form->field($model, 'category_id')->textInput() ?>
+    <?php
+    $condition = [];
+    if (!$model->isNewRecord) {
+        $condition = ['<>', 'id', $model->id];
+    }
+
+    $parents = \app\models\Category::find()->where($condition)->all();
+    $parents = \yii\helpers\ArrayHelper::map($parents, 'id', 'name');
+    ?>
+
+    <?= $form->field($model, 'category_id')->dropDownList($parents); ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

@@ -26,7 +26,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'My Company',
+        'brandLabel' => 'Калейдоскоп',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -35,17 +35,17 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => 'Home', 'url' => ['default/index']],
+            ['label' => 'Админка', 'url' => ['/admin']],
             [
                 'label' => 'Категории',
                 'url' => ['category/index'],
                 'linkOptions' => [],
-            ],
-            Yii::$app->user->isGuest ?
-                ['label' => 'Login', 'url' => ['/site/login']] :
-                ['label' => 'Logout (' . Yii::$app->user->identity->username . ')',
+            ]
+            /*Yii::$app->user->isGuest ?
+                ['label' => 'Войти', 'url' => ['/site/login']] :
+                ['label' => 'Выйти (' . Yii::$app->user->identity->username . ')',
                     'url' => ['/site/logout'],
-                    'linkOptions' => ['data-method' => 'post']],
+                    'linkOptions' => ['data-method' => 'post']],*/
         ],
     ]);
     NavBar::end();
@@ -53,6 +53,7 @@ AppAsset::register($this);
 
     <div class="container">
         <?= Breadcrumbs::widget([
+            'homeLink' => false,
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
         <?= $content ?>

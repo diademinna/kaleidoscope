@@ -34,9 +34,9 @@ class CategoryController extends AdminController
     public function actionIndex()
     {
 //        $this->layout = '@app/admin/layouts/main';
-        $dataProvider = new ActiveDataProvider([
-            'query' => Category::find(),
-        ]);
+        $dataProvider = new ActiveDataProvider(array(
+            'query' => Category::find()->orderBy('pos ASC')
+        ));
 
         return $this->render('index', [
             'dataProvider' => $dataProvider,
@@ -100,6 +100,7 @@ class CategoryController extends AdminController
      */
     public function actionDelete($id)
     {
+
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);

@@ -11,12 +11,12 @@ use Yii;
  * @property string $name
  * @property integer $number
  * @property string $description
- * @property string $ext
+ * @property string $image
  * @property integer $active
  * @property integer $pos
  * @property integer $category_id
  *
- * @property Category $category
+ * @property Category $parent
  * @property Category[] $categories
  * @property GroupParam[] $groupParams
  * @property Product[] $products
@@ -39,7 +39,7 @@ class Category extends \yii\db\ActiveRecord
         return [
             [['number', 'active', 'pos', 'category_id'], 'integer'],
             [['description'], 'string'],
-            [['name', 'ext'], 'string', 'max' => 255]
+            [['name', 'image'], 'string', 'max' => 255]
         ];
     }
 
@@ -49,21 +49,21 @@ class Category extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'name' => 'Name',
-            'number' => 'Number',
-            'description' => 'Description',
-            'ext' => 'Ext',
-            'active' => 'Active',
-            'pos' => 'Pos',
-            'category_id' => 'Category ID',
+            'id' => 'Идентификатор',
+            'name' => 'Название',
+            'number' => 'Количество товаров',
+            'description' => 'Описание',
+            'image' => 'Изображение',
+            'active' => 'На сайте',
+            'pos' => 'Позиция',
+            'category_id' => 'Родитель'
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getCategory()
+    public function getParent()
     {
         return $this->hasOne(Category::className(), ['id' => 'category_id']);
     }
@@ -94,8 +94,10 @@ class Category extends \yii\db\ActiveRecord
 
     public function beforeDelete()
     {
-        foreach ($this->products as $product) {
-            $product->delete();
+        foreach ($this->categories as $category) {
+            $category->delete();
         }
+
+        return parent::beforeDelete();
     }
 }

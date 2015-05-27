@@ -6,7 +6,7 @@ use yii\grid\GridView;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Categories';
+$this->title = 'Категории';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="category-index">
@@ -14,23 +14,22 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Category', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Добавить категорию', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
+        'emptyText' => 'Пусто',
+        'summary' => 'Всего {count} записей',
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
             'id',
-            'name',
-            'number',
-            'description:ntext',
-            'ext',
-            // 'active',
-            // 'pos',
-            // 'category_id',
-
+            'name' ,
+            'number' ,
+            'description',
+            'image' ,
+            'active' ,
+            'pos',
+            'category_id',
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
