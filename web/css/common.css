@@ -1,0 +1,122 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,cyrillic);
+body {
+    background-color: #f8f6eb;
+    margin: 0;
+    padding: 0;
+    font-family: Open Sans;
+    color:#909090;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1.3;
+
+}
+div.clear {
+    clear: both;
+    float: none;
+    height: 0;
+    line-height: 1px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+header .header_top{
+    background-color: #fcfcf7;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.05);
+    color: #9d9d9d;
+    font-size: 12px;
+    padding:2px 0;
+}
+.content{
+    margin:0 auto;
+    width:980px;
+}
+header .header_top ul.menu{
+    list-style: none;
+    margin:8px 0;
+    padding:0;
+}
+header .header_top ul.menu li{
+    display: inline-block;
+    padding:0 15px;
+}
+header .header_top ul.menu li a{text-decoration: none;color:#9d9d9d;}
+header .header_top ul.menu li:first-child{padding-left:0;}
+header .auth_menu{
+    float: left;
+    width:400px;
+}header .my_cart{
+    float: right;
+    background: url("/img/korzina_top.png") no-repeat transparent 0 0;
+    padding:6px 0 5px 35px;
+    margin-top:3px;
+}
+header .logo_container{
+    margin:40px 0;
+}
+header .logo_container .logo{
+    float:left;
+    width:225px;
+}
+header .block_contacts{
+    float:left;
+    width:350px;
+    margin-left:100px;
+    margin-right:50px;
+}
+header .block_contacts .item{
+    margin: 6px 0;
+    color:#4b4b4b;
+    font-size: 15px;
+}
+header .block_contacts .item span{font-weight: 700;}
+header .block_search{
+    float: left;
+    width:255px;
+    margin-top:20px;
+}
+header .block_search input{
+    border-radius: 0;
+    border: 1px solid #d7d7d7;
+    float:left;
+    font-family: Open Sans;
+    font-size: 14px;
+    padding:5px 10px;
+    width:220px;
+}
+header .block_search button{
+    background: url("/img/search.png") no-repeat #93c567 center center;
+    width:35px;
+    height:30px;
+    border:none;
+}
+header .block_search button:hover{
+   background-color: #fa8268;
+}
+header .main_menu{
+    background-color: #fa8268;
+}
+header .main_menu ul{list-style: none;margin:0;padding: 0;}
+header .main_menu ul li{
+    display:inline-block;
+    text-align: center;
+    position: relative;
+    width:160px;
+    text-align: center;
+    font-size: 14px;
+}
+header .main_menu ul li a{
+    color:#ffffff;
+    text-transform: uppercase;
+    display: block;
+    padding:15px 0;
+}
+header .main_menu ul li:after{
+    position: absolute;
+    content:"";
+    width:1px;
+    height:50px;
+    right:0;
+    background-color: #f8f6eb;
+    top:0;
+}
+
