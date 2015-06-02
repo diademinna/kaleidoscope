@@ -15,54 +15,77 @@ AppAsset::register($this);
         <?php $this->head() ?>
     </head>
     <body>
-    <header>
-        <div class="header_top">
-            <div class="content">
-                <div class="auth_menu">
-                    <ul class="menu">
-                        <li><a href="#">Регистрация</a></li>
-                        <li><a href="#">Личный кабинет</a></li>
-                    </ul>
+        <header>
+            <div class="top_menu">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <ul class="links">
+                                <li><a href="#">Регистрация</a></li>
+                                <li><a href="#">Личный кабинет</a></li>
+                            </ul>
+                            <div class="cart-position">
+                                <div id="cart">
+                                    <div class="heading">
+                                        <i class="icon-basket"></i>
+                                        Моя корзина: <span>(0) продуктов - 0 руб.</span>
+                                        <i class="icon-down-open"></i>
+                                    </div>
+                                    <div class="content">
+                                        <div class="content-scroll">
+                                            <div class="empty">Ваша корзина пуста!</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="my_cart">
-                    Моя корзина: 0 продуктов - 0 руб.
-                </div>
-                <div class="clear"></div>
             </div>
-        </div>
-        <div class="logo_container">
-            <div class="content">
-                <div class="logo">
-                    <a href="/"><img src="/img/logo.png" /></a>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="logo">
+                            <a href="/">
+                                <img alt="Интернет-магазин Калейдоскоп" title="Интернет-магазин Калейдоскоп" src="/img/logo.png">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="contacts_info">
+                            <div class="item">
+                                Адрес: <span>г. Пенза, 1-й Онежский пр-д, д.6</span>
+                            </div>
+                            <div class="item">
+                                Телефон: <span>8 800 523 65 35</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="search">
+                            <form>
+                                <input type="text" placeholder="Поиск..." />
+                                <button><i class="icon-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div id="menu">
+                            <ul class="sf-menu">
+                                <li class="">
+                                    <a href="#">
+                                        <span>Congratulation</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="block_contacts">
-                    <div class="item">Адрес: <span>г. Пенза, 1-й Онежский пр-д, д.6</span></div>
-                    <div class="item">Телефон: <span>8 937 000 23 32</span></div>
-                </div>
-                <div class="block_search">
-                    <form>
-                        <input type="text" value="" placeholder="Поиск..."/>
-                        <button></button>
-                        <div class="clear"></div>
-                    </form>
-                </div>
-                <div class="clear"></div>
             </div>
-        </div>
+        </header>
 
-        <div class="content">
-            <div class="main_menu">
-                <ul>
-                    <li><a href="#">Каталог</a></li>
-                    <li><a href="#">Доставка</a></li>
-                    <li><a href="#">Способы оплаты</a></li>
-                    <li><a href="#">Контакты</a></li>
-                    <li><a href="#">Акции</a></li>
-                    <li><a href="#">Отзывы клиентов</a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
+
+
     <?php $this->beginBody() ?>
 
     <div class="content">
