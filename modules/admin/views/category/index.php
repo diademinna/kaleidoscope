@@ -23,11 +23,20 @@ $this->params['breadcrumbs'][] = $this->title;
         'summary' => 'Всего {count} записей',
         'columns' => [
             'id',
-            'name' ,
-            'number' ,
+            'name',
+            'number',
             'description',
-            'image' ,
-            'active' ,
+            'image',
+            [
+                'attribute' => 'image',
+                'format' => 'html',
+                'value' => function (\app\models\Category $model, $key, $index, $column) {
+                    return Html::img($model->getImageUrl(),[
+                        'style' => ''
+                    ]);
+                }
+            ],
+            'active',
             'pos',
             'category_id',
             ['class' => 'yii\grid\ActionColumn'],

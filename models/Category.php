@@ -2,7 +2,9 @@
 
 namespace app\models;
 
+use app\modules\admin\components\CImageHandler;
 use Yii;
+use yii\web\UploadedFile;
 
 /**
  * This is the model class for table "category".
@@ -99,5 +101,30 @@ class Category extends \yii\db\ActiveRecord
         }
 
         return parent::beforeDelete();
+    }
+
+    public function getImagePath()
+    {
+        return Yii::$app->basePath . '/web/upload/category/' . $this->id . '.jpg';
+    }
+
+    public function getImageUrl()
+    {
+        return '/upload/category/' . $this->id . '.jpg';
+    }
+
+    public function afterSave($insert, $changedAttributes)
+    {
+        parent::afterSave($insert, $changedAttributes);
+
+        $file = UploadedFile::getInstance($this, 'image');
+        if ($file !== null) {
+            $file->saveAs($this->getImagePath());
+
+            $image = new CImageHandler();
+            $image->load($this->getImagePath());
+            $image->resize(300, 200);
+            $image->save();
+        }
     }
 }
