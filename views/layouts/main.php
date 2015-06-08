@@ -114,101 +114,87 @@ AppAsset::register($this);
               </div>
               <div class="clear"></div>
             </div>
-            <div class="header-menu">
-              <div class="container">
-              fdf
-              </div>
+
+            <div class="container">
+            <ul class="header-menu">
+              <li class="header-menu__item catalog">
+                <a class="header-menu_link" data-toggle="dropdown" href="#">Каталог <i class="icon-down-open"></i></a>
+                <ul class="header_catalog_category">
+                  <li class="header_catalog__main_category">
+                    <a class="header-catalog_name_link" href="#"><div style="background: url('/img/preview_catalog/tsvety.png') no-repeat transparent 0 0;" class="header-catalog_name">Цветы</div></a>
+                    <ul class="header-subcategory">
+                      <li class="header-subcategory__item"><a class="header-subcategory__link" href="#">Букеты из свежих цветов</a></li>
+                      <li class="header-subcategory__item"><a class="header-subcategory__link" href="#">Горшечные цветы</a></li>
+                      <li class="header-subcategory__item"><a class="header-subcategory__link" href="#">Живые цветы</a></li>
+                      <li class="header-subcategory__item"><a class="header-subcategory__link" href="#">Живые цветы</a></li>
+                    </ul>
+                  </li>
+                  <li class="header_catalog__main_category">
+                    <a class="header-catalog_name_link" href="#"><div style="background: url('/img/preview_catalog/podarok.png') no-repeat transparent 0 0;" class="header-catalog_name">Подарки и сувениры</div></a>
+                    <ul class="header-subcategory">
+                      <li class="header-subcategory__item"><a class="header-subcategory__link" href="#">Букеты из свежих цветов</a></li>
+                      <li class="header-subcategory__item"><a class="header-subcategory__link" href="#">Горшечные цветы</a></li>
+                      <li class="header-subcategory__item"><a class="header-subcategory__link" href="#">Живые цветы</a></li>
+                    </ul>
+                  </li>
+                  <li class="header_catalog__main_category">
+                    <a class="header-catalog_name_link" href="#"><div style="background: url('/img/preview_catalog/otkrytki.png') no-repeat transparent 0 0;" class="header-catalog_name">Открытки</div></a>
+                    <ul class="header-subcategory">
+                      <li class="header-subcategory__item"><a class="header-subcategory__link" href="#">Букеты из свежих цветов</a></li>
+                      <li class="header-subcategory__item"><a class="header-subcategory__link" href="#">Горшечные цветы</a></li>
+                      <li class="header-subcategory__item"><a class="header-subcategory__link" href="#">Живые цветы</a></li>
+                    </ul>
+                  </li>
+                  <li class="header_catalog__main_category">
+                    <a class="header-catalog_name_link" href="#"><div style="background: url('/img/preview_catalog/shary.png') no-repeat transparent 0 0;" class="header-catalog_name">Воздушные шары</div></a>
+                    <ul class="header-subcategory">
+                      <li class="header-subcategory__item"><a class="header-subcategory__link" href="#">Букеты из свежих цветов</a></li>
+                      <li class="header-subcategory__item"><a class="header-subcategory__link" href="#">Горшечные цветы</a></li>
+                      <li class="header-subcategory__item"><a class="header-subcategory__link" href="#">Живые цветы</a></li>
+                    </ul>
+                  </li>
+                  <li class="header_catalog__main_category">
+                    <a class="header-catalog_name_link" href="#"><div style="background: url('/img/preview_catalog/igrushki.png') no-repeat transparent 0 0;" class="header-catalog_name">Мягкие игрушки</div></a>
+                    <ul class="header-subcategory">
+                      <li class="header-subcategory__item"><a class="header-subcategory__link" href="#">Букеты из свежих цветов</a></li>
+                      <li class="header-subcategory__item"><a class="header-subcategory__link" href="#">Горшечные цветы</a></li>
+                      <li class="header-subcategory__item"><a class="header-subcategory__link" href="#">Живые цветы</a></li>
+                    </ul>
+                  </li>
+                  <li class="header_catalog__main_category">
+                    <a class="header-catalog_name_link" href="#"><div style="background: url('/img/preview_catalog/bukety.png') no-repeat transparent 0 0;" class="header-catalog_name">Букеты из игрушек</div></a>
+                    <ul class="header-subcategory">
+                      <li class="header-subcategory__item"><a class="header-subcategory__link" href="#">Букеты из свежих цветов</a></li>
+                      <li class="header-subcategory__item"><a class="header-subcategory__link" href="#">Горшечные цветы</a></li>
+                      <li class="header-subcategory__item"><a class="header-subcategory__link" href="#">Живые цветы</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="header-menu__item"><a class="header-menu_link" href="#">Доставка</a></li>
+              <li class="header-menu__item"><a class="header-menu_link" href="#">Способы оплаты</a></li>
+              <li class="header-menu__item"><a class="header-menu_link" href="#">Контакты</a></li>
+              <li class="header-menu__item"><a class="header-menu_link" href="#">Акции</a></li>
+              <li class="header-menu__item"><a class="header-menu_link" href="#">Отзывы</a></li>
+              <div class="clear"></div>
+            </ul>
             </div>
             <!--
 
+                  <?php foreach ($this->context->categories as $category) { ?>
+                      <div class="category">
+                          <div class="name_category">
+                              <?= \yii\helpers\Html::img($category->getImageUrl()) ?>
+                              <?= $category->name ?>
+                          </div>
 
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-4 col-xs-12">
-                        <div class="search">
-                            <form>
-                                <input type="text" placeholder="Поиск..."/>
-                                <button><i class="icon-search"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div id="menu">
-                            <ul class="sf-menu">
-                                <li class="catalog"><a href="#"><span>Каталог<i class="icon-down-open"></i></span></a>
+                          <div class="item">1Букеты из свежих цветов</div>
+                          <div class="item">2Горшечные цветы</div>
+                          <div class="item">3Живые цветы</div>
+                          <div class="item">4Букет невесты</div>
+                      </div>
+                  <?php } ?>
 
-                                    <div class="sub_menu">
-
-                                        <?php foreach ($this->context->categories as $category) { ?>
-                                            <div class="category">
-                                                <div class="name_category">
-                                                    <?= \yii\helpers\Html::img($category->getImageUrl()) ?>
-                                                    <?= $category->name ?>
-                                                </div>
-
-                                                <div class="item">1Букеты из свежих цветов</div>
-                                                <div class="item">2Горшечные цветы</div>
-                                                <div class="item">3Живые цветы</div>
-                                                <div class="item">4Букет невесты</div>
-                                            </div>
-                                        <?php } ?>
-
-
-                                        <div class="category">
-                                            <div class="name_category">
-                                                <img src="/img/category/tsvety.png"/>Цветы
-                                            </div>
-                                            <div class="item">Букеты из свежих цветов</div>
-                                            <div class="item">Горшечные цветы</div>
-                                            <div class="item">Живые цветы</div>
-                                            <div class="item">Букет невесты</div>
-                                        </div>
-                                        <div class="category_transparent"></div>
-                                        <div class="category">
-                                            <div class="name_category">
-                                                <img src="/img/category/tsvety.png"/>Цветы
-                                            </div>
-                                            <div class="item">Букеты из свежих цветов</div>
-                                            <div class="item">Горшечные цветы</div>
-                                            <div class="item">Живые цветы</div>
-                                            <div class="item">Букет невесты</div>
-                                        </div>
-                                        <div class="category_transparent"></div>
-                                        <div class="category">
-                                            <div class="name_category">
-                                                <img src="/img/category/tsvety.png"/>Цветы
-                                            </div>
-                                            <div class="item">Букеты из свежих цветов</div>
-                                            <div class="item">Горшечные цветы</div>
-                                            <div class="item">Живые цветы</div>
-                                            <div class="item">Букет невесты</div>
-                                        </div>
-                                        <div class="category_transparent"></div>
-                                        <div class="category">
-                                            <div class="name_category">
-                                                <img src="/img/category/tsvety.png"/>Цветы
-                                            </div>
-                                            <div class="item">Букеты из свежих цветов</div>
-                                            <div class="item">Горшечные цветы</div>
-                                            <div class="item">Живые цветы</div>
-                                            <div class="item">Букет невесты</div>
-                                        </div>
-                                        <div class="clear"></div>
-                                    </div>
-                                </li>
-                                <li><a href="#"><span>Доставка</span></a></li>
-                                <li><a href="#"><span>Способы оплаты</span></a></li>
-                                <li><a href="#"><span>Конаткты</span></a></li>
-                                <li><a href="#"><span>Акции</span></a></li>
-                                <li><a href="#"><span>Отзывы клиентов</span></a></li>
-                            </ul>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </div>
             -->
         </div>
     </header>
