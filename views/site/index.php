@@ -54,13 +54,13 @@ $this->title = 'Калейдоскоп';
 <div class="container-width_670px">
   <div class="bgr-dark_red title-block">популярные товары</div>
   <div class="container-product">
-  fdds
+    <div class="container-product__image"><img src="/img/products/1.png" /></div>
   </div>
   <div class="container-product">
-  fdds
+    <div class="container-product__image"><img  src="/img/products/2.png" /></div>
   </div>
   <div class="container-product last">
-  fdds
+    <div class="container-product__image"<img src="/img/products/3.png" /></div>
   </div>
   <div class="clear"></div>
 </div>

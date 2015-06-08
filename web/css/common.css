@@ -75,5 +75,7 @@ header { color:#9d9d9d;font-size: 12px;}
 .bgr-dark_red {background-color: #eb5f60; }
 .bgr-green {background-color: #93c567;}
 .title-block{color: #ffffff; text-align: center; text-transform: uppercase;padding:7px 0; font-size: 15px; margin:0 0 20px 0;}
-.container-product{background-color: #ffffff; border:1px solid #e9e8dd; width:198px; float: left;margin-right:20px;padding:10px 5px 5px 5px;}
+.container-product{background-color: #ffffff; border:1px solid #e9e8dd; width:198px; float: left;margin-right:20px;padding:15px 5px 5px 5px; text-align: center;}
 .container-product.last{margin-right: 0;}
+.container-product__image {height:170px;}
+.container-product__image img{max-width: 160px; max-height: 170px;}
