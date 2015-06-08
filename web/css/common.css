@@ -14,7 +14,7 @@ header { color:#9d9d9d;font-size: 12px;}
 .header-cart__heading { padding:6px 0 8px 0; cursor: pointer;}
 .header-cart__heading .icon-basket{ font-size: 15px;  color:#eb5f60;}
 .header-cart__heading:hover .icon-down-open{ color: #eb5f60;}
-.header-cart__content { position: absolute; display:none; top:100%; right:0; box-shadow: 0 5px 5px rgba(0, 0, 0, 0.05);width: 267px;padding: 20px;background-color: #ffffff; margin-top:1px;}
+.header-cart__content { position: absolute; z-index: 5; display:none; top:100%; right:0; box-shadow: 0 5px 5px rgba(0, 0, 0, 0.05);width: 267px;padding: 20px;background-color: #ffffff; margin-top:1px;}
 .open .header-cart__content {display:block;}
 .header-cart__containe{text-align: center;}
 .header-cart-product { margin-top:15px;  position: relative;  padding-bottom: 18px;}
@@ -62,3 +62,18 @@ header { color:#9d9d9d;font-size: 12px;}
 .header-catalog_name_link { color:#585858; text-decoration: none;}
 .header-subcategory__link{color:#585858; text-decoration: none;}
 .header-subcategory__link:hover{text-decoration: underline;}
+
+.index-category{list-style: none; padding:0; margin:35px 0 40px 0;}
+.index-category__item {display:inline-block;width:126px; margin:0 17px;text-align: center; vertical-align: top;}
+.index-category__image {border:1px solid #eb5f60;border-radius: 63px; display: table-cell; vertical-align: middle; height:126px; width:126px;}
+.index-category__name{margin:15px 0 0 0; font-weight: 700;}
+.index-category__link{color: #585858; text-decoration: none;}
+.index-category__link:hover .index-category__image {border-color: #93c567;}
+.index-category__link:hover .index-category__name {color: #93c567;}
+.container-width_670px {width:670px; float: left; margin-right:20px;}
+.container-width_300px {width:300px; float: left;}
+.bgr-dark_red {background-color: #eb5f60; }
+.bgr-green {background-color: #93c567;}
+.title-block{color: #ffffff; text-align: center; text-transform: uppercase;padding:7px 0; font-size: 15px; margin:0 0 20px 0;}
+.container-product{background-color: #ffffff; border:1px solid #e9e8dd; width:198px; float: left;margin-right:20px;padding:10px 5px 5px 5px;}
+.container-product.last{margin-right: 0;}

@@ -179,31 +179,30 @@ AppAsset::register($this);
               <div class="clear"></div>
             </ul>
             </div>
-            <!--
-
-                  <?php foreach ($this->context->categories as $category) { ?>
-                      <div class="category">
-                          <div class="name_category">
-                              <?= \yii\helpers\Html::img($category->getImageUrl()) ?>
-                              <?= $category->name ?>
-                          </div>
-
-                          <div class="item">1Букеты из свежих цветов</div>
-                          <div class="item">2Горшечные цветы</div>
-                          <div class="item">3Живые цветы</div>
-                          <div class="item">4Букет невесты</div>
-                      </div>
-                  <?php } ?>
-
-            -->
         </div>
     </header>
+    <!--
 
+          <?php foreach ($this->context->categories as $category) { ?>
+              <div class="category">
+                  <div class="name_category">
+                      <?= \yii\helpers\Html::img($category->getImageUrl()) ?>
+                      <?= $category->name ?>
+                  </div>
+
+                  <div class="item">1Букеты из свежих цветов</div>
+                  <div class="item">2Горшечные цветы</div>
+                  <div class="item">3Живые цветы</div>
+                  <div class="item">4Букет невесты</div>
+              </div>
+          <?php } ?>
+
+    -->
 
 
     <?php $this->beginBody() ?>
 
-    <div class="content">
+    <div class="container">
         <?= $content ?>
     </div>
 
