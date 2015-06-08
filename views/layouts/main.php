@@ -22,54 +22,109 @@ AppAsset::register($this);
     <div class="wraper">
         <header>
             <div class="header-topbar">
-                gfgdfg
+              <div class="container">
+                <ul class="header-action">
+                    <li class="header-action__item"><a class="header-action__link" href="#">Регистрация</a></li>
+                    <li class="header-action__item"><a class="header-action__link" href="#">Личный кабинет</a></li>
+                </ul>
+                <div class="header-cart">
+                  <div class="header-cart__heading" data-toggle="dropdown">
+                    <i class="icon-basket"></i>
+                    Моя корзина: (0) продуктов - 0 руб.
+                    <i class="icon-down-open"></i>
+                  </div>
+                  <div class="header-cart__content">
+                    <div class="header-cart__container"> <!--вся область корзины-->
+                      <!--Корзина пуста-->
+                      Добавленные товары
+                      <div class="header-cart-product">
+                        <div class="header-cart-product__remove"><i class="icon-cancel-circled" title="Убрать из корзины"></i></div>
+                        <div class="header-cart-product__img"><a href="#"><img src="/img/img_cart.png" /></a></div>
+                        <div class="header-cart-product-description">
+                          <div class="header-cart-product-description__name"><a href="#">Аромат Прованса</a></div>
+                          <div class="header-cart-product-description__params">
+                            - розовый <br />
+                            - дорогая упаковка
+                          </div>
+                          <div class="header-cart-product-description__count">
+                            x 1 <span>1200 руб.</span>
+                          </div>
+                        </div>
+                        <div class="clear"></div>
+                      </div>
+                      <!--перечень продуктов в корзине-->
+                      <div class="header-cart-product">
+                        <div class="header-cart-product__remove"><i class="icon-cancel-circled" title="Убрать из корзины"></i></div>
+                        <div class="header-cart-product__img"><a href="#"><img src="/img/img_cart.png" /></a></div>
+                        <div class="header-cart-product-description">
+                          <div class="header-cart-product-description__name"><a href="#">Аромат Прованса</a></div>
+                          <div class="header-cart-product-description__params">
+                            - розовый <br />
+                            - дорогая упаковка
+                          </div>
+                          <div class="header-cart-product-description__count">
+                            x 1 <span>1200 руб.</span>
+                          </div>
+                        </div>
+                        <div class="clear"></div>
+                      </div>
+                      <!--перечень продуктов в корзине-->
+                      <!--общая стоимость-->
+                      <div class="header-cart-total">
+                          <table class="header-cart-total__item">
+                            <tr>
+                              <td class="name">Стоимость:</td>
+                              <td><span>2 400 руб.</span></td>
+                            </tr>
+                            <tr>
+                              <td class="name">Доставка:</td>
+                              <td><span>130 руб.</span></td>
+                            </tr>
+                            <tr>
+                              <td class="name">Общая стоимость:</td>
+                              <td><span>2 530 руб.</span></td>
+                            </tr>
+                          </table>
+                      </div>
+                      <div class="clear"></div>
+                      <!--общая стоимость-->
+                      <div class="header-cart-actions">
+                        <div class="header-cart-actions__button"><a class="header-cart-actions__button__link" href="#">Обзор корзины</a></div>
+                        <div class="header-cart-actions__button"><a class="header-cart-actions__button__link" href="#">Оформить заказ</a></div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="header__logo">
+                <a href="/"><img src="/img/logo.png" alt="Калейдоскоп"  title="Калейдоскоп"/></a>
+              </div>
+              <div class="header-contacts">
+                <div class="header-contacts__item">Адрес: <span>г. Пенза, 1-й Онежский проезд, д.6</span></div>
+                <div class="header-contacts__item">Телефон: <span>8 935 455 25 26</span></div>
+              </div>
+              <div class="header-search">
+                <form>
+                  <button class="header-search__button"><i class="icon-search"></i></button>
+                  <input class="header-search__input" type="text" name="seach_phrase" placeholder="Поиск...">
+                </form>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="header-menu">
+              <div class="container">
+              fdf
+              </div>
             </div>
             <!--
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12 col-md-12">
-                            <ul class="links">
-                                <li><a href="#">Регистрация</a></li>
-                                <li><a href="#">Личный кабинет</a></li>
-                            </ul>
-                            <div class="cart-position">
-                                <div id="cart">
-                                    <div class="heading">
-                                        <i class="icon-basket"></i>
-                                        Моя корзина: <span>(0) продуктов - 0 руб.</span>
-                                        <i class="icon-down-open"></i>
-                                    </div>
-                                    <div class="content">
-                                        <div class="content-scroll">
-                                            <div class="empty">Ваша корзина пуста!</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-4 col-xs-12">
-                        <div class="logo">
-                            <a href="/">
-                                <img alt="Интернет-магазин Калейдоскоп" title="Интернет-магазин Калейдоскоп"
-                                     src="/img/logo.png">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-xs-12">
-                        <div class="contacts_info">
-                            <div class="item">
-                                Адрес: <span>г. Пенза, 1-й Онежский пр-д, д.6</span>
-                            </div>
-                            <div class="item">
-                                Телефон: <span>8 800 523 65 35</span>
-                            </div>
-                        </div>
-                    </div>
                     <div class="col-sm-4 col-xs-12">
                         <div class="search">
                             <form>

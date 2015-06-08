@@ -24,10 +24,12 @@ class AppAsset extends AssetBundle
 
     ];
     public $js = [
-        'js/script.js'
+        'js/jquery-1.11.3.min.js',
+        'js/script.js',
+        'js/bootstrap.min.js'
     ];
     public $depends = [
-        'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset',
+    //    'yii\web\YiiAsset',
+      //  'yii\bootstrap\BootstrapAsset',
     ];
 }
