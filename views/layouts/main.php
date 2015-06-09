@@ -201,12 +201,52 @@ AppAsset::register($this);
 
 
     <?php $this->beginBody() ?>
-
     <div class="container">
         <?= $content ?>
     </div>
-
     <?php $this->endBody() ?>
+    <footer>
+      <div class="footer-bgr_white">
+        <div class="container">
+        <div class="footer-logo"><img src="/img/logo.png" alt="Калейдоскоп" title="Калейдоскоп" /></div>
+        <ul class="footer-container-menu">
+          <li class="footer-menu">
+            <div class="footer-menu__name">Информация</div>
+            <ul class="footer-submenu">
+              <li class="footer-submenu__item"><a class="footer-submenu__link" href="#">Доставка</a></li>
+              <li class="footer-submenu__item"><a class="footer-submenu__link" href="#">Защита покупателя</a></li>
+              <li class="footer-submenu__item"><a class="footer-submenu__link" href="#">Способы оплаты</a></li>
+            </ul>
+          </li>
+          <li class="footer-menu">
+            <div class="footer-menu__name">Покупателям</div>
+            <ul class="footer-submenu">
+              <li class="footer-submenu__item"><a class="footer-submenu__link" href="#">Акции</a></li>
+              <li class="footer-submenu__item"><a class="footer-submenu__link" href="#">Скидки</a></li>
+              <li class="footer-submenu__item"><a class="footer-submenu__link" href="#">Карты сайта</a></li>
+            </ul>
+          </li>
+          <li class="footer-menu">
+            <div class="footer-menu__name">Контакты</div>
+            <ul class="footer-submenu">
+              <li class="footer-submenu__item">email@yandex.ru</li>
+              <li class="footer-submenu__item">8 (800) 100-20-30</li>
+              <li class="footer-submenu__item">8 (800) 100-20-30</li>
+            </ul>
+          </li>
+          <li class="footer-menu">
+            <div class="footer-menu__name">Наши адреса</div>
+            <ul class="footer-submenu">
+              <li class="footer-submenu__item">г. Пенза, 1-й Онежский проезд, д.6</li>
+              <li class="footer-submenu__item">г. Пенза, 1-й Онежский проезд, д.6</li>
+            </ul>
+          </li>
+        </ul>
+        <div class="clear"></div>
+        </div>
+      </div>
+      <div class="footer-bottom bgr-dark_red ">Интернет-магазин "Калейдоскоп"  © 2015 </div>
+    </footer>
     </body>
     </html>
 <?php $this->endPage() ?>
