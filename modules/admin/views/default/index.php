@@ -1,6 +1,8 @@
 <div class="admin-default-index">
+  <br />
+  <br />
     <h1>Добро пожаловать в админку!</h1>
-    <!-- <h1><?= $this->context->action->uniqueId ?></h1>
+    <!--   <h1><?= $this->context->action->uniqueId ?></h1>
 
 
     <p>

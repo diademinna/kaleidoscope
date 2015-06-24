@@ -78,13 +78,14 @@ header { color:#9d9d9d;font-size: 12px;}
 .container-product{background-color: #ffffff; border:1px solid #e9e8dd; width:192px; float: left;margin: 0 20px 25px 0;padding:15px 8px 10px 8px; text-align: center;}
 .container-product.last{margin-right: 0;}
 .container-product__image {height:170px;}
-.container-product__name {font-weight: 700; text-transform: uppercase; height:45px; line-height: 20px;}
+.container-product__name {font-weight: 700; text-transform: uppercase; height:45px; margin-top:10px; line-height: 20px;}
 .container-product__name a {color:#676767; text-decoration: none;}
 .container-product-price {margin:5px 8px 20px 8px; font-family: Lobster;}
 .container-product__old_price{float:left; max-width:85px; text-align: left; color:#464646; font-size: 18px; text-decoration: line-through;}
 .container-product__price{float:right; width:97px; text-align: right;font-size: 22px; color: #eb5f60;}
 .button-in-cart {font-size: 15px; color:#ffffff; background-color: #93c567;}
 .button-in-cart a {color:#ffffff; text-decoration: none; display: block; padding:3px 0 8px 0;}
+.button-in-cart a:hover {background-color:#eb5f60;}
 .button-in-cart .icon-basket {font-size: 18px;}
 .container-bestsellers {background-color: #ffffff; padding:10px 20px;}
 .block-bestsellers{margin:10px 0 0 0;}

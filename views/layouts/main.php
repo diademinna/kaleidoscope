@@ -181,23 +181,19 @@ AppAsset::register($this);
             </div>
         </div>
     </header>
-    <!--
+
 
           <?php foreach ($this->context->categories as $category) { ?>
+
               <div class="category">
                   <div class="name_category">
                       <?= \yii\helpers\Html::img($category->getImageUrl()) ?>
                       <?= $category->name ?>
                   </div>
-
-                  <div class="item">1Букеты из свежих цветов</div>
-                  <div class="item">2Горшечные цветы</div>
-                  <div class="item">3Живые цветы</div>
-                  <div class="item">4Букет невесты</div>
               </div>
           <?php } ?>
 
-    -->
+
 
 
     <?php $this->beginBody() ?>
@@ -208,7 +204,7 @@ AppAsset::register($this);
     <footer>
       <div class="footer-bgr_white">
         <div class="container">
-        <div class="footer-logo"><img src="/img/logo.png" alt="Калейдоскоп" title="Калейдоскоп" /></div>
+        <div class="footer-logo"><a href="/"><img src="/img/logo.png" alt="Калейдоскоп" title="Калейдоскоп" /></a></div>
         <ul class="footer-container-menu">
           <li class="footer-menu">
             <div class="footer-menu__name">Информация</div>
@@ -229,7 +225,7 @@ AppAsset::register($this);
           <li class="footer-menu">
             <div class="footer-menu__name">Контакты</div>
             <ul class="footer-submenu">
-              <li class="footer-submenu__item">email@yandex.ru</li>
+              <li class="footer-submenu__item"><a class="footer-submenu__link" href="mailto:email@yandex.ru">email@yandex.ru</a></li>
               <li class="footer-submenu__item">8 (800) 100-20-30</li>
               <li class="footer-submenu__item">8 (800) 100-20-30</li>
             </ul>

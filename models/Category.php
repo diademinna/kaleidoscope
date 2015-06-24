@@ -96,14 +96,19 @@ class Category extends \yii\db\ActiveRecord
 
     public function beforeDelete()
     {
+
         foreach ($this->categories as $category) {
             $category->delete();
         }
-
         return parent::beforeDelete();
     }
 
+
     public function getImagePath()
+    {
+        return Yii::$app->basePath . '/web/upload/category/' . $this->id . '.jpg';
+    }
+    public function getImagePathIcon()
     {
         return Yii::$app->basePath . '/web/upload/category/' . $this->id . '.jpg';
     }
@@ -115,16 +120,19 @@ class Category extends \yii\db\ActiveRecord
 
     public function afterSave($insert, $changedAttributes)
     {
+
         parent::afterSave($insert, $changedAttributes);
 
         $file = UploadedFile::getInstance($this, 'image');
         if ($file !== null) {
-            $file->saveAs($this->getImagePath());
+            $file->saveAs($this->getImagePath().$this->name);
 
             $image = new CImageHandler();
-            $image->load($this->getImagePath());
-            $image->resize(300, 200);
+            $image->load($this->getImagePath().$this->name);
+            $image->resize(100, 100);
             $image->save();
+
+
         }
     }
 }

@@ -49,6 +49,7 @@ class SiteController extends FrontController
 
     public function actionIndex()
     {
+
         return $this->render('index');
     }
 
