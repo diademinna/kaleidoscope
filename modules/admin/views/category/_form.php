@@ -36,12 +36,13 @@ use yii\widgets\ActiveForm;
 
     $parents = \app\models\Category::find()->where($condition)->all();
     $parents = \yii\helpers\ArrayHelper::map($parents, 'id', 'name');
+
     ?>
 
     <?= $form->field($model, 'category_id')->dropDownList($parents); ?>
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?= Html::submitButton($model->isNewRecord ? 'Добавить категорию' : 'Сохранить', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

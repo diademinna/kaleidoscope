@@ -40,6 +40,11 @@ AppAsset::register($this);
                 'label' => 'Категории',
                 'url' => ['category/index'],
                 'linkOptions' => [],
+            ],
+            [
+                'label' => 'Продукты',
+                'url' => ['product/index'],
+                'linkOptions' => [],
             ]
             /*Yii::$app->user->isGuest ?
                 ['label' => 'Войти', 'url' => ['/site/login']] :

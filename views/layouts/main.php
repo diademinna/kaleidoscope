@@ -118,8 +118,8 @@ AppAsset::register($this);
             <div class="container">
             <ul class="header-menu">
               <li class="header-menu__item catalog">
-                <a class="header-menu_link" data-toggle="dropdown" href="#">Каталог <i class="icon-down-open"></i></a>
-                <ul class="header_catalog_category">
+                <a class="header-menu_link" data-toggle="dropdown" href="#">Каталог</a>
+                <!--<ul class="header_catalog_category">
                   <li class="header_catalog__main_category">
                     <a class="header-catalog_name_link" href="#"><div style="background: url('/img/preview_catalog/tsvety.png') no-repeat transparent 0 0;" class="header-catalog_name">Цветы</div></a>
                     <ul class="header-subcategory">
@@ -169,7 +169,7 @@ AppAsset::register($this);
                       <li class="header-subcategory__item"><a class="header-subcategory__link" href="#">Живые цветы</a></li>
                     </ul>
                   </li>
-                </ul>
+                </ul>-->
               </li>
               <li class="header-menu__item"><a class="header-menu_link" href="#">Доставка</a></li>
               <li class="header-menu__item"><a class="header-menu_link" href="#">Способы оплаты</a></li>
@@ -183,15 +183,6 @@ AppAsset::register($this);
     </header>
 
 
-          <?php foreach ($this->context->categories as $category) { ?>
-
-              <div class="category">
-                  <div class="name_category">
-                      <?= \yii\helpers\Html::img($category->getImageUrl()) ?>
-                      <?= $category->name ?>
-                  </div>
-              </div>
-          <?php } ?>
 
 
 

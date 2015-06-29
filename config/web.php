@@ -49,6 +49,7 @@ $config = [
         'admin' => [
             'class' => 'app\modules\admin\Module',
         ],
+        'gii'
     ],
 
     'params' => $params,

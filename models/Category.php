@@ -4,6 +4,7 @@ namespace app\models;
 
 use app\modules\admin\components\CImageHandler;
 use Yii;
+use yii\db\ActiveQuery;
 use yii\web\UploadedFile;
 
 /**
@@ -75,7 +76,13 @@ class Category extends \yii\db\ActiveRecord
      */
     public function getCategories()
     {
-        return $this->hasMany(Category::className(), ['category_id' => 'id']);
+        $query = Category::find()->where([
+            'category_id' => $this->id,
+        ])
+        ->where(['not',['category_id' => null]]);
+
+
+        return $query->all();
     }
 
     /**
@@ -96,7 +103,6 @@ class Category extends \yii\db\ActiveRecord
 
     public function beforeDelete()
     {
-
         foreach ($this->categories as $category) {
             $category->delete();
         }
@@ -108,10 +114,12 @@ class Category extends \yii\db\ActiveRecord
     {
         return Yii::$app->basePath . '/web/upload/category/' . $this->id . '.jpg';
     }
-    public function getImagePathIcon()
+
+    public function getImageIconPath()
     {
-        return Yii::$app->basePath . '/web/upload/category/' . $this->id . '.jpg';
+        return Yii::$app->basePath . '/web/upload/category/' . $this->id . '_icon.jpg';
     }
+
 
     public function getImageUrl()
     {
@@ -125,12 +133,14 @@ class Category extends \yii\db\ActiveRecord
 
         $file = UploadedFile::getInstance($this, 'image');
         if ($file !== null) {
-            $file->saveAs($this->getImagePath().$this->name);
-
+            $file->saveAs($this->getImagePath());
             $image = new CImageHandler();
-            $image->load($this->getImagePath().$this->name);
-            $image->resize(100, 100);
+            $image->load($this->getImagePath());
+            $image->resize(90, 90);
             $image->save();
+            $image->reload();
+            $image->resize(50, 50, false);
+            $image->save($this->getImageIconPath());
 
 
         }
